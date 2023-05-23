@@ -2,7 +2,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 # initial variables
-N = 100
+N = 11 # 1000+ for a good fit
 h = float( 1/N )
 p = -1
 
@@ -80,9 +80,14 @@ def l2_norm( X: np.array):
         sum += X[ i ]**2
     return np.sqrt( sum )
 
-avg_error = l2_norm(Y-U)/N
-print( 'Average error =', avg_error )
+# avg_error = l2_norm(Y-U)/N
+# print( 'Average error =', avg_error )
 
-plt.plot( X, Y, 'b-', label = 'exact solution' )
-plt.plot( X, U, '--', color = 'orange', label = 'numerical solution' )
-plt.show()
+# print gnuplot-compatible result
+for i in range( N ):
+    print( X[ i ], U[ i ] )
+
+# uncomment for python plots
+# plt.plot( X, Y, 'b-', label = 'exact solution' )
+# plt.plot( X, U, '--', color = 'orange', label = 'numerical solution' )
+# plt.show()
