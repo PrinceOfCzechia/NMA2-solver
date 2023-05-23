@@ -1,5 +1,5 @@
 import numpy as np
-from matplotlib import pyplot as plt
+# from matplotlib import pyplot as plt
 
 # initial variables
 N = 11 # 1000+ for a good fit
