@@ -89,6 +89,10 @@ f = open( 'solution.txt', 'a' )
 for i in range( N ):
     # print( X[ i ], ' ', U[ i ] )
     f.write( str(X[ i ]) +  '  ' + str(U[ i ]) + '\n' )
+    
+g = open( 'exact.txt', 'a' )
+for i in range( N ):
+    g.write( str(X[ i ]) +  '  ' + str(PY[ i ]) + '\n' )
 
 
 # uncomment for python plots
