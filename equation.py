@@ -69,9 +69,9 @@ def setup_RHS( N, gamma_0, gamma_1 ):
 U = thomas( setup_matrix( N ), setup_RHS( N, 0, 0 ) )
 
 # exact solution
-Y = np.zeros( N )
+PY = np.zeros( N )
 for i in range( N ):
-    Y[ i ] = np.sin( np.pi * X[ i ]**2)
+    PY[ i ] = np.sin( np.pi * X[ i ]**2)
 
 # comparison
 def l2_norm( X: np.array):
@@ -80,7 +80,7 @@ def l2_norm( X: np.array):
         sum += X[ i ]**2
     return np.sqrt( sum )
 
-# error = l2_norm(Y-U)
+# error = l2_norm(PY-U)
 # avg_error = error/N
 # print( 'Error =', error, 'Average error =', avg_error )
 
@@ -89,6 +89,6 @@ for i in range( N ):
     print( X[ i ], ' ', U[ i ] )
 
 # uncomment for python plots
-# plt.plot( X, Y, 'b-', label = 'exact solution' )
+# plt.plot( X, PY, 'b-', label = 'exact solution' )
 # plt.plot( X, U, '--', color = 'orange', label = 'numerical solution' )
 # plt.show()
