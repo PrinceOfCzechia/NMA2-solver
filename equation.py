@@ -1,8 +1,8 @@
 import numpy as np
-# from matplotlib import pyplot as plt
+from matplotlib import pyplot as plt
 
 # initial variables
-N = 101 # 1000+ for a good fit
+N = 1201 # 1000+ for a good fit
 h = float( 1/N )
 p = -1
 
@@ -96,6 +96,6 @@ for i in range( N ):
 
 
 # uncomment for python plots
-# plt.plot( X, PY, 'b-', label = 'exact solution' )
-# plt.plot( X, U, '--', color = 'orange', label = 'numerical solution' )
-# plt.show()
+plt.plot( X, PY, 'b-', label = 'exact solution' )
+plt.plot( X, U, '--', color = 'orange', label = 'numerical solution' )
+plt.show()
