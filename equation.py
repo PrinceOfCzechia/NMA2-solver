@@ -85,8 +85,11 @@ def l2_norm( X: np.array):
 # print( 'Error =', error, 'Average error =', avg_error )
 
 # print gnuplot-compatible result
+f = open( 'solution.txt', 'a' )
 for i in range( N ):
-    print( X[ i ], ' ', U[ i ] )
+    # print( X[ i ], ' ', U[ i ] )
+    f.write( str(X[ i ]) +  '  ' + str(U[ i ]) + '\n' )
+
 
 # uncomment for python plots
 # plt.plot( X, PY, 'b-', label = 'exact solution' )
